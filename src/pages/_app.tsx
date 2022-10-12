@@ -1,6 +1,14 @@
 import type { AppProps } from 'next/app';
-import '@/styles/globals.css';
+import ContextWrapper from '@/context';
+import Layout from '@/components/commons/layout';
+import '@global/index.scss';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ContextWrapper>
+      <Layout pageProps={pageProps}>
+        <Component {...pageProps} />
+      </Layout>
+    </ContextWrapper>
+  );
 }
