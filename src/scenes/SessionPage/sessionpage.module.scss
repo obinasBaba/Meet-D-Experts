@@ -59,8 +59,9 @@
     .search {
       display: flex;
       max-width: 600px;
-      min-width: 62vw;
-      padding: 2rem 2rem 2rem 9rem;
+      min-width: 58vw;
+      padding: 0 0 0 9rem;
+
 
       //border: 1px solid red;
 
@@ -73,10 +74,11 @@
 
         .title {
           //margin-bottom: -1.5rem;
+          //line-height: 100%;
 
           color: s.$clrs-cat-light-blue;
 
-          span{
+          span {
             font-weight: 900;
           }
         }
@@ -120,13 +122,11 @@
           justify-content: space-between;
           max-width: 70%;
           gap: 1rem;
-          margin-top: 3rem;
+          margin-top: 2rem;
 
           //border: 1px solid red;
 
           .social_item {
-
-
             display: flex;
             flex: 1;
             flex-flow: column;

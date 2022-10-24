@@ -4,30 +4,9 @@ import AppToolTip from '@/components/commons/FixedLayer/AppToolTip';
 import Image from 'next/image';
 
 import Logo from '@/public/logo.svg';
-import { Button, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Link from 'next/link';
-
-function NavBarBottom() {
-  const links = [
-    'Sessions',
-    'Directory',
-    'Submit a Question',
-    'Meet D Team',
-    'Archives',
-  ];
-
-  return (
-    <nav className={s.nav_bottom}>
-      {links.map((link) => (
-        <Button key={link} variant='contained'>
-          <Link href="/">
-            <a>{link}</a>
-          </Link>
-        </Button>
-      ))}
-    </nav>
-  );
-}
+import { NavBarBottom } from '@/components/commons/FixedLayer/NavBarBottom';
 
 const FixedLayer = () => {
   const links = ['About', 'FAQs', 'Contact Us'];

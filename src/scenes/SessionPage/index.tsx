@@ -29,7 +29,7 @@ const searchVariants = {
   exit: {
     x: '-100%',
     transition: {
-      delay: 0.07,
+      delay: 0.15,
       duration: 0.5,
     },
   },
@@ -60,7 +60,6 @@ const SessionPage = () => {
         <AnimatePresence mode="popLayout">
           {show && (
             <motion.div
-              layout
               className={s.search}
               ref={searchRef}
               variants={searchVariants}
@@ -127,7 +126,17 @@ const SessionPage = () => {
             </motion.div>
           )}
 
-          <motion.div className={s.events} layout key="events">
+          <motion.div
+            className={s.events}
+            layout
+            key="events"
+            transition={{
+              layout: {
+                duration: 0.7,
+                ease: 'easeInOut'
+              },
+            }}
+          >
             <button
               onClick={() => {
                 setShow(!show);
