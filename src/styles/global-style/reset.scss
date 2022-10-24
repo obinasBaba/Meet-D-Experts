@@ -2,6 +2,7 @@
 @use "../variables/fonts" as f;
 @use "../mixins/font" as *;
 @use "../variables/breakpoints" as *;
+@use "../variables/colors" as *;
 
 
 :root {
@@ -103,6 +104,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   font-size: 18px;
+
   font-family: f.$sofia-pro;
   //font-weight: 900;
 
@@ -111,12 +113,15 @@ html {
 
   @media screen and (max-width: 1920px) {
     font-size: 16px;
+
   }
   @media screen and (max-width: 1400px) {
     font-size: 14px;
+
   }
   @media screen and (max-width: 1200px) {
     font-size: 12px;
+
   }
 }
 
@@ -127,8 +132,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  background-color: #f6f6f6 !important;
-  //background-color: white;
+  background-color: $grey-dark !important;
 }
 
 h1,
@@ -138,6 +142,8 @@ h4,
 h5,
 h6 {
   //margin: 0;
+  font-family: f.$gramatika !important;
+  font-weight: 900 !important;
 }
 
 img {

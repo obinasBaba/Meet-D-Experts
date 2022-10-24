@@ -1,13 +1,13 @@
 {
-  "name": "typescript-nextjs-starter",
-  "description": "My corner of internet where I share my code experiment and blogs.",
-  "version": "1.0.0",
+  "name": "meet-d-experts",
+  "description": "Learning Platform",
+  "version": "0.0.1",
   "private": true,
-  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
+  "author": "Henok Getahcew",
   "license": "MIT",
   "keywords": [
     "nextjs",
-    "starter",
+    "react.js",
     "typescript"
   ],
   "scripts": {
@@ -26,16 +26,31 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "11.10.4",
+    "@emotion/server": "11.10.0",
+    "@emotion/styled": "11.10.4",
+    "@mui/material": "5.10.9",
+    "clsx": "1.2.1",
+    "date-fns": "2.29.3",
     "framer-motion": "7.5.3",
     "gsap": "3.11.3",
+    "lodash.debounce": "4.0.8",
     "lottie-web": "5.9.6",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-device-detect": "2.2.2",
+    "react-dom": "18.2.0",
+    "reading-time": "1.5.0",
+    "rehype-autolink-headings": "6.1.1",
+    "rehype-img-size": "1.0.1",
+    "rehype-prism-plus": "1.5.0",
+    "rehype-slug": "5.0.1",
+    "swiper": "8.4.4"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "@types/lodash.debounce": "4.0.7",
     "@types/node": "16.11.64",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",

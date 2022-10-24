@@ -1,0 +1,115 @@
+@use '@/styles' as s;
+
+.container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 2rem 2.3rem;
+  gap: 3rem;
+
+  //border: 1px solid red;
+
+
+  // @include s.margin(top, 10rem);
+  // @include s.padding(bottom, 8rem);
+
+  & :local {
+
+    .text {
+      display: flex;
+      flex-flow: column;
+      gap: 1rem;
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .date_title {
+          display: flex;
+          flex-flow: column;
+
+          & > :first-child{
+            font-weight: 900;
+          }
+        }
+
+        .date {
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+
+          & > :first-child{
+            font-weight: 900;
+          }
+        }
+
+        .live {
+          position: relative;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            height: .6rem;
+            width: .6rem;
+            background: red;
+            border-radius: 50%;
+            margin-right: .4rem;
+          }
+        }
+      }
+
+      .desc {
+        max-width: 50ch;
+      }
+
+      .people {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .people_profiles {
+          display: flex;
+          align-items: center;
+
+          .people_img {
+            //border-radius: 50%;
+            display: grid;
+            place-items: center;
+            height: 2rem;
+            width: 2rem;
+            border: 2px solid white;
+            border-radius: 50%;
+
+            & > :first-child{
+              display: block !important;
+            }
+          }
+        }
+
+        p {
+
+        }
+      }
+
+      .btns {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .thumbnail {
+
+      width: 27vmax;
+      border-radius: 2rem;
+      overflow: hidden;
+
+      //border: 1px solid blue;
+
+      & > :first-child{
+        display: block !important;
+      }
+    }
+  }
+}
