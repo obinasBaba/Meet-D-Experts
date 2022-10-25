@@ -18,9 +18,13 @@
       display: flex;
       flex-flow: column;
       align-items: flex-start;
-      //gap: 2rem;
-      & > :first-child {
+
+
+      .title{
         line-height: 115%;
+        color: s.$clrs-grey-80;
+        font-weight: 600;
+        font-size: 1.4rem;
       }
 
       .date {

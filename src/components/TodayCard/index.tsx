@@ -19,8 +19,8 @@ const TodayCard = () => {
           <div className={s.date_title}>
             <Typography variant="h2">Thursday</Typography>
             <div className={s.date}>
-              <Typography variant="h5">Jan 7th, 2022</Typography>
-              <Typography variant="subtitle2">Friday, 10:00pm WAT</Typography>
+              <Typography >Jan 7th, 2022</Typography>
+              <Typography >Friday, 10:00pm WAT</Typography>
             </div>
           </div>
           <div className={s.live}>Live</div>
@@ -47,14 +47,14 @@ const TodayCard = () => {
               </div>
             ))}
           </div>
-          <Typography variant="subtitle2">500+ going</Typography>
+          <Typography >500+ going</Typography>
         </div>
 
         <div className={s.btns}>
           <Button variant="contained" size="large">
             Join Now
           </Button>
-          <Button variant="contained" size="large">
+          <Button variant="outlined" size="large">
             View Event
           </Button>
         </div>

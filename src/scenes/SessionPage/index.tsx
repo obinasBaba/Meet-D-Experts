@@ -52,11 +52,7 @@ const SessionPage = () => {
       dragSnapToOrigin
       // dragPropagation
     >
-      <motion.div
-        className={clsx([s.wrapper, 'track'])}
-        layout
-        onLayoutAnimationComplete={() => {}}
-      >
+      <motion.div className={clsx([s.wrapper, 'track'])} layout>
         <AnimatePresence mode="popLayout">
           {show && (
             <motion.div
@@ -133,15 +129,13 @@ const SessionPage = () => {
             transition={{
               layout: {
                 duration: 0.7,
-                ease: 'easeInOut'
+                ease: 'easeInOut',
               },
             }}
           >
             <button
-              onClick={() => {
-                setShow(!show);
-                return;
-              }}
+              onClick={() => setShow(!show)}
+              className={s.btn}
             >
               hide
             </button>
@@ -166,7 +160,7 @@ const SessionPage = () => {
 
                 <div className={s.title_detail}>
                   <Typography gutterBottom>Title:</Typography>
-                  <Typography variant="h6" className={s.title} gutterBottom>
+                  <Typography className={s.title}>
                     Getting started with Figma; A designer’s First steps
                   </Typography>
                   <div className={s.tags}>

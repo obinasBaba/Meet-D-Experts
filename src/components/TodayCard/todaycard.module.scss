@@ -4,7 +4,7 @@
   display: flex;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
-  padding: 2rem 2.3rem;
+  padding: 2.6rem;
   gap: 3rem;
 
   //border: 1px solid red;
@@ -31,6 +31,7 @@
 
           & > :first-child{
             font-weight: 900;
+            color: s.$clrs-cat-light-blue;
           }
         }
 
@@ -38,9 +39,17 @@
           display: flex;
           align-items: center;
           gap: .5rem;
+          padding-left: 1rem;
 
           & > :first-child{
-            font-weight: 900;
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+
+          & > :last-child{
+            color: s.$clrs-grey-80;
+            font-weight: 300;;
+            font-size: .84rem;
           }
         }
 
@@ -61,12 +70,18 @@
 
       .desc {
         max-width: 50ch;
+        a{
+          color: s.$clrs-cat-light-blue;
+          font-weight: 600;
+        }
       }
 
       .people {
+        align-self: flex-start;
+
         display: flex;
         align-items: center;
-        gap: 1rem;
+        //gap: 1rem;
 
         .people_profiles {
           display: flex;
@@ -76,10 +91,9 @@
             //border-radius: 50%;
             display: grid;
             place-items: center;
-            height: 2rem;
-            width: 2rem;
-            border: 2px solid white;
+            //border: 2px solid white;
             border-radius: 50%;
+            max-width: 2rem;
 
             & > :first-child{
               display: block !important;
@@ -88,14 +102,22 @@
         }
 
         p {
-
+          font-weight: lighter;
+          font-size: .8rem;
+          transform: translateX(-.7rem);
         }
       }
 
       .btns {
         display: flex;
         gap: 1rem;
-        margin-top: 1rem;
+        margin-top: auto;
+
+        button{
+          font-size: 1rem;
+          padding: .8rem 2rem;
+
+        }
       }
     }
 
