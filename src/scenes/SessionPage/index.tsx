@@ -1,6 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './sessionpage.module.scss';
-import { Chip, TextField, Typography } from '@mui/material';
+import {
+  Button,
+  Chip,
+  IconButton,
+  SvgIcon,
+  TextField,
+  Typography,
+} from '@mui/material';
 import Image from 'next/image';
 import TodayCard from '@/components/TodayCard';
 import UpcomingCard from '@/components/UpcomingCard';
@@ -22,14 +29,17 @@ const searchVariants = {
   initial: {
     // opacity: 0,
     x: '-100%',
+    scale: 0.4,
   },
   animate: {
     x: 0,
+    scale: 1,
   },
   exit: {
     x: '-100%',
+    scale: 0.5,
     transition: {
-      delay: 0.15,
+      delay: 0.1,
       duration: 0.5,
     },
   },
@@ -133,44 +143,26 @@ const SessionPage = () => {
               },
             }}
           >
-            <button
-              onClick={() => setShow(!show)}
+            {/*<SvgIcon >*/}
+            <svg
+              width="20"
+              height="26"
+              viewBox="0 0 10 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
               className={s.btn}
+              onClick={() => setShow(!show)}
             >
-              hide
-            </button>
-            <div className={s.today}>
-              <TodayCard />
+              <path
+                d="M8.5 15L1.5 8L8.5 1"
+                stroke="#fff"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
 
-              <div className={s.detail}>
-                <div className={s.date}>
-                  <div>
-                    <p>days</p>
-                    <Typography variant="h3">04</Typography>
-                  </div>
-                  <div>
-                    <p>Hours</p>
-                    <Typography variant="h3">12</Typography>
-                  </div>
-                  <div>
-                    <p>Minutes</p>
-                    <Typography variant="h3">32</Typography>
-                  </div>
-                </div>
-
-                <div className={s.title_detail}>
-                  <Typography gutterBottom>Title:</Typography>
-                  <Typography className={s.title}>
-                    Getting started with Figma; A designer’s First steps
-                  </Typography>
-                  <div className={s.tags}>
-                    <Chip clickable label="#UX design" />
-                    <Chip clickable label="#UX design" />
-                    <Chip clickable label="#UX design" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TodayCard />
 
             <div className={s.upcoming}>
               <Typography variant="h4" gutterBottom>

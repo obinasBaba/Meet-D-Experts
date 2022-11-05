@@ -13,14 +13,14 @@ const UpcomingCard = ({ idx }: { idx: number }) => {
   return (
     <div className={s.container}>
       <div className={s.text}>
-        <Typography  className={s.title}>
+        <Typography className={s.title}>
           Finding Your niche as a creative...
         </Typography>
 
         <div className={s.date}>
           <div>
             <Typography noWrap>Jan 7th, 2022</Typography>
-            <Typography variant="subtitle2">Friday, 10:00pm WAT</Typography>
+            <Typography variant="subtitle2" color='darkgray'>Friday, 10:00pm WAT</Typography>
           </div>
           <Button variant="contained" size="small">
             RSVP
